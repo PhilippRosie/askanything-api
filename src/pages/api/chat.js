@@ -8,7 +8,7 @@ const openai = new OpenAIApi(configuration);
 
 export default async function handler(req, res) {
   const { text } = req.query;
-  console.log("4", text);
+  console.log("3", text);
 
   const completion = await openai.createCompletion({
     model: "text-davinci-003",
