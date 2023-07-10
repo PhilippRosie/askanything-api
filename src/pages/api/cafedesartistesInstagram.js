@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   const { REACT_APP_INSTAGRAM_TOKEN } = process.env;
 
   try {
-    const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalinkm&access_token=${process.env}`;
+    const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalinkm&access_token=${REACT_APP_INSTAGRAM_TOKEN}`;
     const response = await fetch(url);
     const data = await response.json();
     res.status(200).json(data);
